@@ -1,32 +1,24 @@
 import React, {useState, useEffect} from 'react';
-import Search from './Search';
+import Search from '../components/Search';
 import ProductItem from './ProductItem';
 
 function Home({ items, handleUpdateQuantity, successMessage }) {
-  const [filteredItems, setFilteredItems] = useState(items);
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const filteredItems = items.filter((item) =>
+    item.title.toLowerCase().includes(searchTerm.trim().toLowerCase())
+  );
 
   useEffect(() => {
-    setFilteredItems(items);
+    setSearchTerm('');
   }, [items]);
 
-  const handleFilter = (term) => {
-    const trimmedTerm = term.trim();
-    if (trimmedTerm === '') {
-      setFilteredItems(items); 
-    } else {
-      const filtered = items.filter((item) =>
-        item.title.toLowerCase().includes(trimmedTerm.toLowerCase())
-      );
-      setFilteredItems(filtered);
-    }
-  };
-
-  
   return (
     <div className='centercolumn'>
         <div className='homeflexwrap'>
             <Search 
-            handleFilter={handleFilter}
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
             />
 
             <div className='homecontent'>

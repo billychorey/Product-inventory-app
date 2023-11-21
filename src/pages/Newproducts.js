@@ -1,19 +1,15 @@
 import React, {useState} from 'react';
 
-
 function Newproducts({handleAddNewItem}) {
-    const [newItem, setNewItem] = useState( 
-        {
-            title: '',
-            price: '',
-            description: '',
-            category: 'default',
-            image: '',
-            quantity: ''
-        }
-    )
-
-    //assign to a variable
+    const itemTemplate = {
+        title: '',
+        price: '',
+        description: '',
+        category: 'default',
+        image: '',
+        quantity: ''
+    }
+    const [newItem, setNewItem] = useState(itemTemplate)
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -41,14 +37,7 @@ function Newproducts({handleAddNewItem}) {
             return;
         } else {
             handleAddNewItem(newItem);
-            setNewItem({
-                title: '',
-                price: '',
-                description: '',
-                category: 'default',
-                image: '',
-                quantity: ''
-            });
+            setNewItem(itemTemplate);
         }
     };
       
@@ -109,7 +98,8 @@ function Newproducts({handleAddNewItem}) {
                 onChange={handleChange} type="submit" />
             </form>
 
-            <ul>
+            <h3>Sample image urls for adding items</h3>
+            <ol>
                 <li>shirt: 
                     <p>
                         https://www.mrporter.com/variants/images/3633577411310824/in/w2000_q60.jpg
@@ -135,7 +125,7 @@ function Newproducts({handleAddNewItem}) {
                         https://m.media-amazon.com/images/I/71PO11NzkKL._AC_SX679_.jpg                    
                     </p>
                 </li>
-            </ul>
+            </ol>
         </div>
     )
 }

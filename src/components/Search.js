@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function Search({ handleFilter }) {
-    const [searchTerm, setSearchTerm] = useState('');
+function Search({  searchTerm, setSearchTerm }) {
 
     const handleChange = (e) => {
         const newSearchTerm = e.target.value;
         setSearchTerm(newSearchTerm);
-        handleFilter(newSearchTerm);
     };
 
     return (

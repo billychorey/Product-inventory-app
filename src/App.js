@@ -1,7 +1,16 @@
-import Navbar from './components/Navbar';
-import AppRoutes from './components/AppRoutes';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+
+import Home from './pages/Home';
+import Mens from './pages/Mens';
+import Womens from './pages/Womens';
+import Products from './pages/Products';
+import Newproducts from './pages/Newproducts';
+import Error from './pages/Error';
+
+import Navbar from './components/Navbar';
+
 
 function App() {
   const [items, setItems] = useState([]);
@@ -78,15 +87,17 @@ function App() {
   return (
     <>
       <Navbar />
-      <AppRoutes 
-        items={items}
-        mensItems={mensItems}
-        womensItems={womensItems}
-        otherItems={otherItems}
-        handleAddNewItem={handleAddNewItem}
-        handleUpdateQuantity={handleUpdateQuantity}
-        successMessage={successMessage}
-      />
+      <Routes>
+          <Route path="/" element={<Home items={items} handleUpdateQuantity={handleUpdateQuantity} successMessage={successMessage} />} />
+          <Route path="/mens" element={<Mens mensItems={mensItems} />} />
+          <Route path="/womens" element={<Womens womensItems={womensItems} />} />
+          <Route path="/products" element={<Products otherItems={otherItems} />} />
+          <Route
+            path="/addnewproducts"
+            element={<Newproducts otherItems={otherItems} handleAddNewItem={handleAddNewItem} handleUpdateQuantity={handleUpdateQuantity} />}
+          />
+          <Route path="/*" element={<Error />} />
+        </Routes>
     </>
   );
 }

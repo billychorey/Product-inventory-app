@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Item from '../components/Item';
 
 function Other({otherItems}) {
     return(
@@ -10,13 +11,7 @@ function Other({otherItems}) {
                     otherItems.map((item) => {
                         return(
                             <li key={item.id}>
-                                {/* products */}
-                                <div>
-                                    <h3>{item.title}</h3>
-                                    <img src={item.image} alt={item.title} />
-                                    <span className='bold'>${item.price}</span>
-                                    <p className='quantity'>Quantity in stock: {item.quantity}</p>
-                                </div>
+                                <Item />
                             </li>
                         )
                     })

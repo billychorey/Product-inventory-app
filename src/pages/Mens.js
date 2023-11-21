@@ -1,4 +1,5 @@
 import React from 'react';
+import Item from '../components/Item'
 
 function Mens({mensItems}) {
 
@@ -10,13 +11,7 @@ function Mens({mensItems}) {
                     mensItems.map((item) => {
                         return(
                             <li key={item.id}>
-                                {/* //make this a component */}
-                                <div>
-                                    <h3>{item.title}</h3>
-                                    <img src={item.image} alt={item.title} />
-                                    <span className='bold'>${item.price}</span>
-                                    <p className='quantity'>Quantity in stock: {item.quantity}</p>
-                                </div>
+                                <Item />
                             </li>
                         )
                     })
