@@ -10,6 +10,7 @@ function Other({otherItems}) {
                     otherItems.map((item) => {
                         return(
                             <li key={item.id}>
+                                {/* products */}
                                 <div>
                                     <h3>{item.title}</h3>
                                     <img src={item.image} alt={item.title} />

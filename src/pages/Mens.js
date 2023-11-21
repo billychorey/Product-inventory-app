@@ -10,6 +10,7 @@ function Mens({mensItems}) {
                     mensItems.map((item) => {
                         return(
                             <li key={item.id}>
+                                {/* //make this a component */}
                                 <div>
                                     <h3>{item.title}</h3>
                                     <img src={item.image} alt={item.title} />

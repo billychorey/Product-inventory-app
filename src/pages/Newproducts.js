@@ -13,12 +13,15 @@ function Newproducts({handleAddNewItem}) {
         }
     )
 
+    //assign to a variable
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setNewItem((prevNewItem) => ({
           ...prevNewItem,
           [name]: value,
         }));    
+
     }
 
     const handleSelect = (e) => {

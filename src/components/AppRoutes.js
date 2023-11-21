@@ -33,3 +33,6 @@ const AppRoutes = ({
 };
 
 export default AppRoutes;
+
+//move back to app
+//get rid of nested objects in db

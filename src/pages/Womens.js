@@ -11,6 +11,7 @@ function Womens({womensItems}) {
                         return(
                             <li key={item.id}>
                                 <div>
+                                    {/* component */}
                                     <h3>{item.title}</h3>
                                     <img src={item.image} alt={item.title} />
                                     <span className='bold'>${item.price}</span>
