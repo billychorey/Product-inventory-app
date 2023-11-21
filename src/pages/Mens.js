@@ -11,7 +11,12 @@ function Mens({mensItems}) {
                     mensItems.map((item) => {
                         return(
                             <li key={item.id}>
-                                <Item />
+                                <Item 
+                                title={item.title}
+                                image={item.image}
+                                price={item.price}
+                                quantity={item.quantity}
+                                />
                             </li>
                         )
                     })
@@ -21,3 +26,5 @@ function Mens({mensItems}) {
     )
 }
 export default Mens;
+
+//title, image, price, quantity
