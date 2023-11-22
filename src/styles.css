@@ -63,7 +63,7 @@ box-* {
 /* nav */
 nav {
   width: 100%;
-  background-color: rgb(73, 73, 69);
+  background-color: var(--blue);
   color: white;
   display: flex;
   justify-content: space-between;
@@ -111,6 +111,8 @@ nav a:hover {
 }
 
 /* search */
+.search {
+}
 .search label {
   display: block;
   margin: 0 0 1rem 0;
@@ -125,16 +127,15 @@ nav a:hover {
 .search {
   width: 300px;
   padding: 0 1.5rem;
-  background: rgb(230, 222, 210);
   color: var(--blue);
 }
 
 /* home */
 .homecontent {
-  background: white;
+  background: var(--white);
   padding: 0 1.5rem;
   color: var(--blue);
-  border: 1px solid rgb(73, 73, 69);
+  border: 1px solid var(--blue);
 
 }
 
@@ -169,6 +170,10 @@ nav a:hover {
   max-width: 100%;
   height: 80px;
   margin: 0 auto 1rem auto;
+  padding: .25rem;
+  background: white;
+  border: 1px solid var(--blue);
+  border-radius: 2px;
 }
 
 /* productitem */
