@@ -57,6 +57,12 @@ function App() {
       });
   };
   
+  const updateItemQuantity = (prevItems, id, updatedQuantity) => {
+    return prevItems.map((item) =>
+      item.id === id ? { ...item, quantity: updatedQuantity } : item
+    );
+  };
+  
   const handleUpdateQuantity = (id, updatedQuantity) => {
     fetch(`http://localhost:3000/items/${id}`, {
       method: 'PATCH',
@@ -74,9 +80,7 @@ function App() {
       })
       .then(() => {
         setItems((prevItems) =>
-          prevItems.map((item) =>
-            item.id === id ? { ...item, quantity: updatedQuantity } : item
-          )
+          updateItemQuantity(prevItems, id, updatedQuantity)
         );
       })
       .catch((error) => {
