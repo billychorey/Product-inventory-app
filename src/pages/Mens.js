@@ -26,5 +26,3 @@ function Mens({mensItems}) {
     )
 }
 export default Mens;
-
-//title, image, price, quantity
