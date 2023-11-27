@@ -43,8 +43,8 @@ function Newproducts({handleAddNewItem}) {
       
     return (
         <div className='centercolumn'>
-            <h1>Add additional inventory:</h1>
-            <form onSubmit={handleSubmit}>
+            <h1 className='formh1'>Add additional inventory:</h1>
+            <form className='newproductform' onSubmit={handleSubmit}>
                 <label>Product title:</label>
                 <input
                 onChange={handleChange}

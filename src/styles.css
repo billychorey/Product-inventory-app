@@ -45,11 +45,11 @@ input[type="submit"]:hover {
 
 /* colors */
 :root {
-  --white: rgb(230, 222, 210);
-  --tan: rgb(196,199,193);
-  --lightgreen: rgb(135,121,86);
-  --darkgreen: rgb(113,102,74);
-  --blue: rgb(73,73,69);
+  --white: rgb(247, 241, 231);
+  --tan: rgb(215,203,190);
+  --lightgreen: rgb(185,200,189);
+  --darkgreen: rgb(97,91,77);
+  --blue: rgb(34,46,58);
 }
 
 box-* {
@@ -107,12 +107,14 @@ nav a:hover {
   width: 90%;
   margin: 0 auto;
   background: var(--white);
-  padding: 1.5rem;
+  padding: 2rem;
+}
+
+.centercolumn h1 {
+  margin-top: 0;
 }
 
 /* search */
-.search {
-}
 .search label {
   display: block;
   margin: 0 0 1rem 0;
@@ -135,8 +137,11 @@ nav a:hover {
   background: var(--white);
   padding: 0 1.5rem;
   color: var(--blue);
-  border: 1px solid var(--blue);
+  position: relative;
+}
 
+.homecontent h1 {
+  margin-top: 0;
 }
 
 .homeflexwrap {
@@ -160,7 +165,6 @@ nav a:hover {
 }
 
 .productslist h3 {
-  text-align: center;
   font-size: 1.2rem;
   line-height: 1.3;
 }
@@ -200,12 +204,18 @@ nav a:hover {
   display: inline-block;
 }
 
-.quantityinput {
+input.quantityinput {
   width: 32px;
+  padding: .45rem .125rem;
   margin-left: .25rem;
+  margin-right: .25rem;
 }
 
 /* form */
+.formh1 {
+  text-align: center;
+}
+
 form {
   width: 300px;
   margin: 0 auto;
@@ -216,15 +226,18 @@ form {
 form label {
   display: block;
   margin-bottom: 1rem;
+  font-weight: bold;
 }
 
-form input {
+.newproductform input {
   display: block;
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 form select {
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 .notation {
@@ -241,6 +254,8 @@ form select {
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
+  position: absolute;
+  top: 0;
 }
 
 /* 404 */

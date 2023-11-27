@@ -18,7 +18,7 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('http://localhost:3000/items')
+    fetch('http://localhost:3001/items')
       .then(res => res.json())
       .then(items => {
         setItems(items);
@@ -29,8 +29,9 @@ function App() {
   const mensItems = items.filter(item => item.category === "mens");
   const womensItems = items.filter(item => item.category === "womens");
   const otherItems = items.filter(item => item.category !== "mens" && item.category !== "womens")
+  
   const handleAddNewItem = (newItem) => {
-    fetch('http://localhost:3000/items', {
+    fetch('http://localhost:3001/items', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -64,7 +65,7 @@ function App() {
   };
   
   const handleUpdateQuantity = (id, updatedQuantity) => {
-    fetch(`http://localhost:3000/items/${id}`, {
+    fetch(`http://localhost:3001/items/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
