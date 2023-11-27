@@ -144,6 +144,10 @@ nav a:hover {
   margin-top: 0;
 }
 
+.itemtitle {
+  margin-top: 0;
+}
+
 .homeflexwrap {
   display: flex;
 }
@@ -162,6 +166,15 @@ nav a:hover {
   margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
+}
+
+.productslist li div {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .productslist h3 {
@@ -182,7 +195,7 @@ nav a:hover {
 
 /* productitem */
 .inventoryform {
-  margin-top: .5rem;
+  margin-top: 1rem;
 }
 
 .inventoryform input::placeholder {

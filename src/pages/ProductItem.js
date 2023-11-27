@@ -17,9 +17,9 @@ function ProductItem({ item, handleUpdateQuantity}) {
         <li>
             <div>
                 <img src={item.image} alt={item.title} />
-                <h3>{item.title}</h3>
+                <h3 className='itemtitle'>{item.title}</h3>
                 <span className='bold, price'>${item.price}</span>
-                <span className='bold'>Quantity in stock: {item.quantity}</span>
+                <span className='quantity'>Quantity in stock: {item.quantity}</span>
                 <form className='inventoryform'
                 onSubmit={handleSubmit}>
                     <label className='quantitylabel'>Update inventory:</label>
