@@ -7,7 +7,7 @@
       "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
       "category": "mens",
       "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-      "quantity": "14"
+      "quantity": "12"
     },
     {
       "id": 2,
@@ -188,6 +188,24 @@
       "image": "https://shop.minecraft.net/cdn/shop/products/MC-ST-CCS_1800x1800.jpg?v=1667227365",
       "quantity": "1",
       "id": 21
+    },
+    {
+      "title": "shirt",
+      "price": "6",
+      "description": "awesome",
+      "category": "mens",
+      "image": "https://www.mrporter.com/variants/images/3633577411310824/in/w2000_q60.jpg",
+      "quantity": "12",
+      "id": 22
+    },
+    {
+      "title": "shirt",
+      "price": "7",
+      "description": "awesome",
+      "category": "mens",
+      "image": "https://www.mrporter.com/variants/images/3633577411310824/in/w2000_q60.jpg",
+      "quantity": "3",
+      "id": 23
     }
   ]
 }
