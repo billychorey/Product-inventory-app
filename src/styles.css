@@ -51,6 +51,24 @@ button.remove {
   font-weight: bold;
 }
 
+ol {
+  padding-left: 1rem;
+}
+
+ol li {
+  font-weight: bold;
+  color: var(--darkgreen);
+
+}
+
+ol li p {
+  font-weight: normal;
+}
+
+.darkgreen {
+  color: var(--darkgreen);
+}
+
 /* colors */
 :root {
   --white: rgb(247, 241, 231);
@@ -171,6 +189,8 @@ nav a:hover {
 }
 
 .productslist li {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--lightgreen);
   max-width: 225px;
   margin-right: 3rem;
   margin-bottom: 3rem;

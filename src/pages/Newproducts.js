@@ -98,7 +98,7 @@ function Newproducts({handleAddNewItem}) {
                 onChange={handleChange} type="submit" />
             </form>
 
-            <h3>Sample image urls for adding items</h3>
+            <h3 className='darkgreen'>Sample image urls for adding items</h3>
             <ol>
                 <li>shirt: 
                     <p>
