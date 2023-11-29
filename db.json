@@ -197,6 +197,15 @@
       "image": "https://m.media-amazon.com/images/I/717CkBjypqL._AC_SX679_.jpg",
       "quantity": "5",
       "id": 22
+    },
+    {
+      "title": "Hat",
+      "price": "40",
+      "description": "Fiesta",
+      "category": "other",
+      "image": "https://m.media-amazon.com/images/I/71PO11NzkKL._AC_SX679_.jpg",
+      "quantity": "17",
+      "id": 23
     }
   ]
 }
