@@ -4,7 +4,7 @@ Photo by <a href="https://unsplash.com/@mikepetrucci?utm_content=creditCopyText&
   
 # Product inventory app
 
-This is a react app representing items in inventory and allows inventory to be filtered, added, and quantities in stock to be updated.
+This is a react app representing items in inventory and allows inventory to be filtered, added, removed, and quantities in stock to be updated.
 
 ## Installation
 
