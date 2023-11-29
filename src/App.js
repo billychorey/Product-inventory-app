@@ -89,11 +89,26 @@ function App() {
       });
   };
 
+  const handleRemoveItem = (id) => {
+    fetch(`http://localhost:3001/items/${id}`, {
+      method: 'DELETE',
+    })
+    .then(res => res.json())
+    .then(() => handleDeleteFromFrontEnd(id))
+  }
+
+  const handleDeleteFromFrontEnd = (id) => {
+    setItems(prevItems => {
+      return prevItems.filter(item => item.id !== id);
+    });
+  };
+  
+
   return (
     <>
       <Navbar />
       <Routes>
-          <Route path="/" element={<Home items={items} handleUpdateQuantity={handleUpdateQuantity} successMessage={successMessage} />} />
+          <Route path="/" element={<Home items={items} handleUpdateQuantity={handleUpdateQuantity} successMessage={successMessage} handleRemoveItem={handleRemoveItem}/>} />
           <Route path="/mens" element={<Mens mensItems={mensItems} />} />
           <Route path="/womens" element={<Womens womensItems={womensItems} />} />
           <Route path="/products" element={<Products otherItems={otherItems} />} />

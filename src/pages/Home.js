@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Search from '../components/Search';
 import ProductItem from './ProductItem';
 
-function Home({ items, handleUpdateQuantity, successMessage }) {
+function Home({ items, handleUpdateQuantity, successMessage, handleRemoveItem }) {
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredItems = items.filter((item) =>
@@ -29,7 +29,8 @@ function Home({ items, handleUpdateQuantity, successMessage }) {
                     <ProductItem 
                     key={item.id} 
                     item={item} 
-                    handleUpdateQuantity={handleUpdateQuantity}/>
+                    handleUpdateQuantity={handleUpdateQuantity}
+                    handleRemoveItem={handleRemoveItem}/>
                 ))}
               </ul>
             </div>

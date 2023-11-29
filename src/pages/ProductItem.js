@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-function ProductItem({ item, handleUpdateQuantity}) {
+function ProductItem({ item, handleUpdateQuantity, handleRemoveItem}) {
  
     const [quantity, setQuantity] = useState(item.quantity);
   
@@ -12,6 +12,11 @@ function ProductItem({ item, handleUpdateQuantity}) {
       e.preventDefault();
       handleUpdateQuantity(item.id, quantity);
     };
+
+    const handleClick = () => {
+      const idToDelete = item.id;
+      handleRemoveItem(idToDelete)
+    }
   
     return (
         <li>
@@ -31,6 +36,12 @@ function ProductItem({ item, handleUpdateQuantity}) {
                     />
                     <input type='submit' />
                 </form>
+                <button 
+                className='remove'
+                onClick={handleClick}
+                >
+                  Remove
+                </button>
             </div>
         </li>
     );
