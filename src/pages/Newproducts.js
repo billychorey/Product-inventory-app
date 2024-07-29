@@ -10,7 +10,6 @@ function Newproducts({handleAddNewItem}) {
         quantity: ''
     }
     const [newItem, setNewItem] = useState(itemTemplate)
-
     const handleChange = (e) => {
         const { name, value } = e.target;
         setNewItem((prevNewItem) => ({

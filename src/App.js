@@ -8,7 +8,6 @@ import Womens from './pages/Womens';
 import Products from './pages/Products';
 import Newproducts from './pages/Newproducts';
 import Error from './pages/Error';
-
 import Navbar from './components/Navbar';
 
 
@@ -108,16 +107,16 @@ function App() {
     <>
       <Navbar />
       <Routes>
-          <Route path="/" element={<Home items={items} handleUpdateQuantity={handleUpdateQuantity} successMessage={successMessage} handleRemoveItem={handleRemoveItem}/>} />
-          <Route path="/mens" element={<Mens mensItems={mensItems} />} />
-          <Route path="/womens" element={<Womens womensItems={womensItems} />} />
-          <Route path="/products" element={<Products otherItems={otherItems} />} />
-          <Route
-            path="/addnewproducts"
-            element={<Newproducts otherItems={otherItems} handleAddNewItem={handleAddNewItem} handleUpdateQuantity={handleUpdateQuantity} />}
-          />
-          <Route path="/*" element={<Error />} />
-        </Routes>
+        <Route path="/" element={<Home items={items} handleUpdateQuantity={handleUpdateQuantity} successMessage={successMessage} handleRemoveItem={handleRemoveItem}/>} />
+        <Route path="/mens" element={<Mens mensItems={mensItems} />} />
+        <Route path="/womens" element={<Womens womensItems={womensItems} />} />
+        <Route path="/products" element={<Products otherItems={otherItems} />} />
+        <Route
+          path="/addnewproducts"
+          element={<Newproducts otherItems={otherItems} handleAddNewItem={handleAddNewItem} handleUpdateQuantity={handleUpdateQuantity} />}
+        />
+        <Route path="/*" element={<Error />} />
+      </Routes>
     </>
   );
 }
